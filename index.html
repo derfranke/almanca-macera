@@ -146,56 +146,56 @@
 /* de=Almanca, ok=okunuşu, tr=anlamı, sd=cümle(Almanca), so=cümle okunuşu,
    st=cümle anlamı, ich/du/er = çekim */
 const VERBS = [
-  {de:"sein",emo:"⭐",ok:"zayn",tr:"olmak",sd:"Ich bin müde.",so:"iş bin müüde",st:"Yorgunum.",ich:"ich bin",du:"du bist",er:"er/sie/es ist"},
-  {de:"haben",emo:"🤲",ok:"haaben",tr:"sahip olmak (var)",sd:"Ich habe einen Hund.",so:"iş haabe aynen hunt",st:"Bir köpeğim var.",ich:"ich habe",du:"du hast",er:"er/sie/es hat"},
-  {de:"gehen",emo:"🚶",ok:"geen",tr:"gitmek (yürüyerek)",sd:"Ich gehe in die Schule.",so:"iş gee-e in di şuule",st:"Okula gidiyorum.",ich:"ich gehe",du:"du gehst",er:"er/sie/es geht"},
-  {de:"kommen",emo:"👋",ok:"komen",tr:"gelmek",sd:"Ich komme nach Hause.",so:"iş kome nah hauze",st:"Eve geliyorum.",ich:"ich komme",du:"du kommst",er:"er/sie/es kommt"},
-  {de:"machen",emo:"🛠️",ok:"mahen",tr:"yapmak",sd:"Ich mache meine Hausaufgaben.",so:"iş mahe mayne hausaufgaaben",st:"Ödevimi yapıyorum.",ich:"ich mache",du:"du machst",er:"er/sie/es macht"},
-  {de:"essen",emo:"🍎",ok:"esen",tr:"yemek yemek",sd:"Ich esse einen Apfel.",so:"iş ese aynen apfel",st:"Bir elma yiyorum.",ich:"ich esse",du:"du isst",er:"er/sie/es isst"},
-  {de:"trinken",emo:"🥤",ok:"trinken",tr:"içmek",sd:"Ich trinke Wasser.",so:"iş trinke vasa",st:"Su içiyorum.",ich:"ich trinke",du:"du trinkst",er:"er/sie/es trinkt"},
-  {de:"spielen",emo:"⚽",ok:"şpiilen",tr:"oynamak",sd:"Ich spiele Fußball.",so:"iş şpiile fusbal",st:"Futbol oynuyorum.",ich:"ich spiele",du:"du spielst",er:"er/sie/es spielt"},
-  {de:"lernen",emo:"📚",ok:"lernen",tr:"öğrenmek",sd:"Ich lerne Deutsch.",so:"iş lerne doyç",st:"Almanca öğreniyorum.",ich:"ich lerne",du:"du lernst",er:"er/sie/es lernt"},
-  {de:"lesen",emo:"📖",ok:"leezen",tr:"okumak",sd:"Ich lese ein Buch.",so:"iş leeze ayn buh",st:"Bir kitap okuyorum.",ich:"ich lese",du:"du liest",er:"er/sie/es liest"},
-  {de:"schreiben",emo:"✏️",ok:"şraayben",tr:"yazmak",sd:"Ich schreibe einen Brief.",so:"iş şraaybe aynen briif",st:"Bir mektup yazıyorum.",ich:"ich schreibe",du:"du schreibst",er:"er/sie/es schreibt"},
-  {de:"sprechen",emo:"💬",ok:"şpreşen",tr:"konuşmak",sd:"Ich spreche Türkisch.",so:"iş şpreşe türkiş",st:"Türkçe konuşuyorum.",ich:"ich spreche",du:"du sprichst",er:"er/sie/es spricht"},
-  {de:"hören",emo:"👂",ok:"höören",tr:"duymak / dinlemek",sd:"Ich höre Musik.",so:"iş hööre muzik",st:"Müzik dinliyorum.",ich:"ich höre",du:"du hörst",er:"er/sie/es hört"},
-  {de:"sehen",emo:"👀",ok:"zeeen",tr:"görmek",sd:"Ich sehe einen Vogel.",so:"iş zee-e aynen foogel",st:"Bir kuş görüyorum.",ich:"ich sehe",du:"du siehst",er:"er/sie/es sieht"},
-  {de:"laufen",emo:"🏃",ok:"laufen",tr:"koşmak",sd:"Ich laufe schnell.",so:"iş laufe şnel",st:"Hızlı koşuyorum.",ich:"ich laufe",du:"du läufst",er:"er/sie/es läuft"},
-  {de:"schlafen",emo:"😴",ok:"şlaafen",tr:"uyumak",sd:"Ich schlafe im Bett.",so:"iş şlaafe im bet",st:"Yatakta uyuyorum.",ich:"ich schlafe",du:"du schläfst",er:"er/sie/es schläft"},
-  {de:"wohnen",emo:"🏠",ok:"voonen",tr:"oturmak / yaşamak",sd:"Ich wohne in Berlin.",so:"iş voone in berliin",st:"Berlin'de oturuyorum.",ich:"ich wohne",du:"du wohnst",er:"er/sie/es wohnt"},
-  {de:"arbeiten",emo:"💼",ok:"arbayten",tr:"çalışmak",sd:"Mein Vater arbeitet viel.",so:"mayn faata arbaytet fiil",st:"Babam çok çalışıyor.",ich:"ich arbeite",du:"du arbeitest",er:"er/sie/es arbeitet"},
-  {de:"kaufen",emo:"🛒",ok:"kaufen",tr:"satın almak",sd:"Ich kaufe Brot.",so:"iş kaufe broot",st:"Ekmek alıyorum.",ich:"ich kaufe",du:"du kaufst",er:"er/sie/es kauft"},
-  {de:"kochen",emo:"🍳",ok:"kohen",tr:"yemek pişirmek",sd:"Meine Mutter kocht Suppe.",so:"mayne muta koht zupe",st:"Annem çorba pişiriyor.",ich:"ich koche",du:"du kochst",er:"er/sie/es kocht"},
-  {de:"fahren",emo:"🚌",ok:"faaren",tr:"(araçla) gitmek",sd:"Ich fahre mit dem Bus.",so:"iş faare mit dem bus",st:"Otobüsle gidiyorum.",ich:"ich fahre",du:"du fährst",er:"er/sie/es fährt"},
-  {de:"schwimmen",emo:"🏊",ok:"şvimen",tr:"yüzmek",sd:"Ich schwimme im Meer.",so:"iş şvime im meea",st:"Denizde yüzüyorum.",ich:"ich schwimme",du:"du schwimmst",er:"er/sie/es schwimmt"},
-  {de:"singen",emo:"🎤",ok:"zingen",tr:"şarkı söylemek",sd:"Ich singe ein Lied.",so:"iş zinge ayn liit",st:"Bir şarkı söylüyorum.",ich:"ich singe",du:"du singst",er:"er/sie/es singt"},
-  {de:"tanzen",emo:"💃",ok:"tantsen",tr:"dans etmek",sd:"Ich tanze gern.",so:"iş tantse gern",st:"Dans etmeyi severim.",ich:"ich tanze",du:"du tanzt",er:"er/sie/es tanzt"},
-  {de:"malen",emo:"🎨",ok:"maalen",tr:"resim yapmak",sd:"Ich male ein Bild.",so:"iş maale ayn bilt",st:"Bir resim yapıyorum.",ich:"ich male",du:"du malst",er:"er/sie/es malt"},
-  {de:"helfen",emo:"🤝",ok:"helfen",tr:"yardım etmek",sd:"Ich helfe meiner Mama.",so:"iş helfe mayna mama",st:"Anneme yardım ediyorum.",ich:"ich helfe",du:"du hilfst",er:"er/sie/es hilft"},
-  {de:"geben",emo:"🎁",ok:"geeben",tr:"vermek",sd:"Ich gebe dir das Buch.",so:"iş geebe diir das buh",st:"Sana kitabı veriyorum.",ich:"ich gebe",du:"du gibst",er:"er/sie/es gibt"},
-  {de:"nehmen",emo:"✋",ok:"neemen",tr:"almak",sd:"Ich nehme einen Apfel.",so:"iş neeme aynen apfel",st:"Bir elma alıyorum.",ich:"ich nehme",du:"du nimmst",er:"er/sie/es nimmt"},
-  {de:"finden",emo:"🔎",ok:"finden",tr:"bulmak",sd:"Ich finde meinen Stift.",so:"iş finde maynen ştift",st:"Kalemimi buluyorum.",ich:"ich finde",du:"du findest",er:"er/sie/es findet"},
-  {de:"suchen",emo:"🕵️",ok:"zuuhen",tr:"aramak",sd:"Ich suche meine Katze.",so:"iş zuuhe mayne katse",st:"Kedimi arıyorum.",ich:"ich suche",du:"du suchst",er:"er/sie/es sucht"},
-  {de:"öffnen",emo:"🚪",ok:"öfnen",tr:"açmak",sd:"Ich öffne die Tür.",so:"iş öfne di tüür",st:"Kapıyı açıyorum.",ich:"ich öffne",du:"du öffnest",er:"er/sie/es öffnet"},
-  {de:"schließen",emo:"🔒",ok:"şliisen",tr:"kapatmak",sd:"Ich schließe das Fenster.",so:"iş şliise das fensta",st:"Pencereyi kapatıyorum.",ich:"ich schließe",du:"du schließt",er:"er/sie/es schließt"},
-  {de:"fragen",emo:"❓",ok:"fraagen",tr:"sormak",sd:"Ich frage den Lehrer.",so:"iş fraage den leera",st:"Öğretmene soruyorum.",ich:"ich frage",du:"du fragst",er:"er/sie/es fragt"},
-  {de:"antworten",emo:"🗣️",ok:"antvorten",tr:"cevap vermek",sd:"Ich antworte richtig.",so:"iş antvorte rihtiş",st:"Doğru cevap veriyorum.",ich:"ich antworte",du:"du antwortest",er:"er/sie/es antwortet"},
-  {de:"verstehen",emo:"💡",ok:"ferşteen",tr:"anlamak",sd:"Ich verstehe die Frage.",so:"iş ferştee-e di fraage",st:"Soruyu anlıyorum.",ich:"ich verstehe",du:"du verstehst",er:"er/sie/es versteht"},
-  {de:"wissen",emo:"🧠",ok:"visen",tr:"bilmek",sd:"Ich weiß die Antwort.",so:"iş vays di antvort",st:"Cevabı biliyorum.",ich:"ich weiß",du:"du weißt",er:"er/sie/es weiß"},
-  {de:"denken",emo:"🤔",ok:"denken",tr:"düşünmek",sd:"Ich denke an dich.",so:"iş denke an diş",st:"Seni düşünüyorum.",ich:"ich denke",du:"du denkst",er:"er/sie/es denkt"},
-  {de:"lieben",emo:"❤️",ok:"liiben",tr:"sevmek",sd:"Ich liebe meine Familie.",so:"iş liibe mayne familye",st:"Ailemi seviyorum.",ich:"ich liebe",du:"du liebst",er:"er/sie/es liebt"},
-  {de:"mögen",emo:"😋",ok:"möögen",tr:"hoşlanmak / sevmek",sd:"Ich mag Schokolade.",so:"iş maag şokolaade",st:"Çikolatayı severim.",ich:"ich mag",du:"du magst",er:"er/sie/es mag"},
-  {de:"wollen",emo:"🙋",ok:"volen",tr:"istemek",sd:"Ich will spielen.",so:"iş vil şpiilen",st:"Oynamak istiyorum.",ich:"ich will",du:"du willst",er:"er/sie/es will"},
-  {de:"können",emo:"💪",ok:"könen",tr:"yapabilmek",sd:"Ich kann schwimmen.",so:"iş kan şvimen",st:"Yüzebilirim.",ich:"ich kann",du:"du kannst",er:"er/sie/es kann"},
-  {de:"müssen",emo:"⏰",ok:"müsen",tr:"zorunda olmak",sd:"Ich muss lernen.",so:"iş mus lernen",st:"Ders çalışmalıyım.",ich:"ich muss",du:"du musst",er:"er/sie/es muss"},
-  {de:"dürfen",emo:"✅",ok:"dürfen",tr:"izinli olmak",sd:"Ich darf fernsehen.",so:"iş darf fernzeeen",st:"Televizyon izleyebilirim.",ich:"ich darf",du:"du darfst",er:"er/sie/es darf"},
-  {de:"brauchen",emo:"🆘",ok:"brauhen",tr:"ihtiyaç duymak",sd:"Ich brauche Hilfe.",so:"iş brauhe hilfe",st:"Yardıma ihtiyacım var.",ich:"ich brauche",du:"du brauchst",er:"er/sie/es braucht"},
-  {de:"bringen",emo:"📦",ok:"bringen",tr:"getirmek",sd:"Ich bringe das Wasser.",so:"iş bringe das vasa",st:"Suyu getiriyorum.",ich:"ich bringe",du:"du bringst",er:"er/sie/es bringt"},
-  {de:"tragen",emo:"🧥",ok:"traagen",tr:"taşımak / giymek",sd:"Ich trage eine Jacke.",so:"iş traage ayne yake",st:"Bir ceket giyiyorum.",ich:"ich trage",du:"du trägst",er:"er/sie/es trägt"},
-  {de:"sitzen",emo:"🪑",ok:"zitsen",tr:"oturmak",sd:"Ich sitze auf dem Stuhl.",so:"iş zitse auf dem ştuul",st:"Sandalyede oturuyorum.",ich:"ich sitze",du:"du sitzt",er:"er/sie/es sitzt"},
-  {de:"stehen",emo:"🧍",ok:"şteen",tr:"ayakta durmak",sd:"Ich stehe an der Tür.",so:"iş ştee-e an dea tüür",st:"Kapıda duruyorum.",ich:"ich stehe",du:"du stehst",er:"er/sie/es steht"},
-  {de:"springen",emo:"🤾",ok:"şpringen",tr:"zıplamak",sd:"Ich springe hoch.",so:"iş şpringe hoh",st:"Yükseğe zıplıyorum.",ich:"ich springe",du:"du springst",er:"er/sie/es springt"},
-  {de:"lachen",emo:"😄",ok:"lahen",tr:"gülmek",sd:"Ich lache viel.",so:"iş lahe fiil",st:"Çok gülüyorum.",ich:"ich lache",du:"du lachst",er:"er/sie/es lacht"}
+  {de:"sein",emo:"⭐",ok:"zayn",tr:"olmak",sd:"Ich bin müde.",so:"iş bin müüde",st:"Yorgunum.",c:{ich:"bin",du:"bist",er:"ist",wir:"sind",ihr:"seid",sie:"sind"}},
+  {de:"haben",emo:"🤲",ok:"haaben",tr:"sahip olmak (var)",sd:"Ich habe einen Hund.",so:"iş haabe aynen hunt",st:"Bir köpeğim var.",c:{ich:"habe",du:"hast",er:"hat",wir:"haben",ihr:"habt",sie:"haben"}},
+  {de:"gehen",emo:"🚶",ok:"geen",tr:"gitmek (yürüyerek)",sd:"Ich gehe in die Schule.",so:"iş gee-e in di şuule",st:"Okula gidiyorum.",c:{ich:"gehe",du:"gehst",er:"geht",wir:"gehen",ihr:"geht",sie:"gehen"}},
+  {de:"kommen",emo:"👋",ok:"komen",tr:"gelmek",sd:"Ich komme nach Hause.",so:"iş kome nah hauze",st:"Eve geliyorum.",c:{ich:"komme",du:"kommst",er:"kommt",wir:"kommen",ihr:"kommt",sie:"kommen"}},
+  {de:"machen",emo:"🛠️",ok:"mahen",tr:"yapmak",sd:"Ich mache meine Hausaufgaben.",so:"iş mahe mayne hausaufgaaben",st:"Ödevimi yapıyorum.",c:{ich:"mache",du:"machst",er:"macht",wir:"machen",ihr:"macht",sie:"machen"}},
+  {de:"essen",emo:"🍎",ok:"esen",tr:"yemek yemek",sd:"Ich esse einen Apfel.",so:"iş ese aynen apfel",st:"Bir elma yiyorum.",c:{ich:"esse",du:"isst",er:"isst",wir:"essen",ihr:"esst",sie:"essen"}},
+  {de:"trinken",emo:"🥤",ok:"trinken",tr:"içmek",sd:"Ich trinke Wasser.",so:"iş trinke vasa",st:"Su içiyorum.",c:{ich:"trinke",du:"trinkst",er:"trinkt",wir:"trinken",ihr:"trinkt",sie:"trinken"}},
+  {de:"spielen",emo:"⚽",ok:"şpiilen",tr:"oynamak",sd:"Ich spiele Fußball.",so:"iş şpiile fusbal",st:"Futbol oynuyorum.",c:{ich:"spiele",du:"spielst",er:"spielt",wir:"spielen",ihr:"spielt",sie:"spielen"}},
+  {de:"lernen",emo:"📚",ok:"lernen",tr:"öğrenmek",sd:"Ich lerne Deutsch.",so:"iş lerne doyç",st:"Almanca öğreniyorum.",c:{ich:"lerne",du:"lernst",er:"lernt",wir:"lernen",ihr:"lernt",sie:"lernen"}},
+  {de:"lesen",emo:"📖",ok:"leezen",tr:"okumak",sd:"Ich lese ein Buch.",so:"iş leeze ayn buh",st:"Bir kitap okuyorum.",c:{ich:"lese",du:"liest",er:"liest",wir:"lesen",ihr:"lest",sie:"lesen"}},
+  {de:"schreiben",emo:"✏️",ok:"şraayben",tr:"yazmak",sd:"Ich schreibe einen Brief.",so:"iş şraaybe aynen briif",st:"Bir mektup yazıyorum.",c:{ich:"schreibe",du:"schreibst",er:"schreibt",wir:"schreiben",ihr:"schreibt",sie:"schreiben"}},
+  {de:"sprechen",emo:"💬",ok:"şpreşen",tr:"konuşmak",sd:"Ich spreche Türkisch.",so:"iş şpreşe türkiş",st:"Türkçe konuşuyorum.",c:{ich:"spreche",du:"sprichst",er:"spricht",wir:"sprechen",ihr:"sprecht",sie:"sprechen"}},
+  {de:"hören",emo:"👂",ok:"höören",tr:"duymak / dinlemek",sd:"Ich höre Musik.",so:"iş hööre muzik",st:"Müzik dinliyorum.",c:{ich:"höre",du:"hörst",er:"hört",wir:"hören",ihr:"hört",sie:"hören"}},
+  {de:"sehen",emo:"👀",ok:"zeeen",tr:"görmek",sd:"Ich sehe einen Vogel.",so:"iş zee-e aynen foogel",st:"Bir kuş görüyorum.",c:{ich:"sehe",du:"siehst",er:"sieht",wir:"sehen",ihr:"seht",sie:"sehen"}},
+  {de:"laufen",emo:"🏃",ok:"laufen",tr:"koşmak",sd:"Ich laufe schnell.",so:"iş laufe şnel",st:"Hızlı koşuyorum.",c:{ich:"laufe",du:"läufst",er:"läuft",wir:"laufen",ihr:"lauft",sie:"laufen"}},
+  {de:"schlafen",emo:"😴",ok:"şlaafen",tr:"uyumak",sd:"Ich schlafe im Bett.",so:"iş şlaafe im bet",st:"Yatakta uyuyorum.",c:{ich:"schlafe",du:"schläfst",er:"schläft",wir:"schlafen",ihr:"schlaft",sie:"schlafen"}},
+  {de:"wohnen",emo:"🏠",ok:"voonen",tr:"oturmak / yaşamak",sd:"Ich wohne in Berlin.",so:"iş voone in berliin",st:"Berlin'de oturuyorum.",c:{ich:"wohne",du:"wohnst",er:"wohnt",wir:"wohnen",ihr:"wohnt",sie:"wohnen"}},
+  {de:"arbeiten",emo:"💼",ok:"arbayten",tr:"çalışmak",sd:"Mein Vater arbeitet viel.",so:"mayn faata arbaytet fiil",st:"Babam çok çalışıyor.",c:{ich:"arbeite",du:"arbeitest",er:"arbeitet",wir:"arbeiten",ihr:"arbeitet",sie:"arbeiten"}},
+  {de:"kaufen",emo:"🛒",ok:"kaufen",tr:"satın almak",sd:"Ich kaufe Brot.",so:"iş kaufe broot",st:"Ekmek alıyorum.",c:{ich:"kaufe",du:"kaufst",er:"kauft",wir:"kaufen",ihr:"kauft",sie:"kaufen"}},
+  {de:"kochen",emo:"🍳",ok:"kohen",tr:"yemek pişirmek",sd:"Meine Mutter kocht Suppe.",so:"mayne muta koht zupe",st:"Annem çorba pişiriyor.",c:{ich:"koche",du:"kochst",er:"kocht",wir:"kochen",ihr:"kocht",sie:"kochen"}},
+  {de:"fahren",emo:"🚌",ok:"faaren",tr:"(araçla) gitmek",sd:"Ich fahre mit dem Bus.",so:"iş faare mit dem bus",st:"Otobüsle gidiyorum.",c:{ich:"fahre",du:"fährst",er:"fährt",wir:"fahren",ihr:"fahrt",sie:"fahren"}},
+  {de:"schwimmen",emo:"🏊",ok:"şvimen",tr:"yüzmek",sd:"Ich schwimme im Meer.",so:"iş şvime im meea",st:"Denizde yüzüyorum.",c:{ich:"schwimme",du:"schwimmst",er:"schwimmt",wir:"schwimmen",ihr:"schwimmt",sie:"schwimmen"}},
+  {de:"singen",emo:"🎤",ok:"zingen",tr:"şarkı söylemek",sd:"Ich singe ein Lied.",so:"iş zinge ayn liit",st:"Bir şarkı söylüyorum.",c:{ich:"singe",du:"singst",er:"singt",wir:"singen",ihr:"singt",sie:"singen"}},
+  {de:"tanzen",emo:"💃",ok:"tantsen",tr:"dans etmek",sd:"Ich tanze gern.",so:"iş tantse gern",st:"Dans etmeyi severim.",c:{ich:"tanze",du:"tanzt",er:"tanzt",wir:"tanzen",ihr:"tanzt",sie:"tanzen"}},
+  {de:"malen",emo:"🎨",ok:"maalen",tr:"resim yapmak",sd:"Ich male ein Bild.",so:"iş maale ayn bilt",st:"Bir resim yapıyorum.",c:{ich:"male",du:"malst",er:"malt",wir:"malen",ihr:"malt",sie:"malen"}},
+  {de:"helfen",emo:"🤝",ok:"helfen",tr:"yardım etmek",sd:"Ich helfe meiner Mama.",so:"iş helfe mayna mama",st:"Anneme yardım ediyorum.",c:{ich:"helfe",du:"hilfst",er:"hilft",wir:"helfen",ihr:"helft",sie:"helfen"}},
+  {de:"geben",emo:"🎁",ok:"geeben",tr:"vermek",sd:"Ich gebe dir das Buch.",so:"iş geebe diir das buh",st:"Sana kitabı veriyorum.",c:{ich:"gebe",du:"gibst",er:"gibt",wir:"geben",ihr:"gebt",sie:"geben"}},
+  {de:"nehmen",emo:"✋",ok:"neemen",tr:"almak",sd:"Ich nehme einen Apfel.",so:"iş neeme aynen apfel",st:"Bir elma alıyorum.",c:{ich:"nehme",du:"nimmst",er:"nimmt",wir:"nehmen",ihr:"nehmt",sie:"nehmen"}},
+  {de:"finden",emo:"🔎",ok:"finden",tr:"bulmak",sd:"Ich finde meinen Stift.",so:"iş finde maynen ştift",st:"Kalemimi buluyorum.",c:{ich:"finde",du:"findest",er:"findet",wir:"finden",ihr:"findet",sie:"finden"}},
+  {de:"suchen",emo:"🕵️",ok:"zuuhen",tr:"aramak",sd:"Ich suche meine Katze.",so:"iş zuuhe mayne katse",st:"Kedimi arıyorum.",c:{ich:"suche",du:"suchst",er:"sucht",wir:"suchen",ihr:"sucht",sie:"suchen"}},
+  {de:"öffnen",emo:"🚪",ok:"öfnen",tr:"açmak",sd:"Ich öffne die Tür.",so:"iş öfne di tüür",st:"Kapıyı açıyorum.",c:{ich:"öffne",du:"öffnest",er:"öffnet",wir:"öffnen",ihr:"öffnet",sie:"öffnen"}},
+  {de:"schließen",emo:"🔒",ok:"şliisen",tr:"kapatmak",sd:"Ich schließe das Fenster.",so:"iş şliise das fensta",st:"Pencereyi kapatıyorum.",c:{ich:"schließe",du:"schließt",er:"schließt",wir:"schließen",ihr:"schließt",sie:"schließen"}},
+  {de:"fragen",emo:"❓",ok:"fraagen",tr:"sormak",sd:"Ich frage den Lehrer.",so:"iş fraage den leera",st:"Öğretmene soruyorum.",c:{ich:"frage",du:"fragst",er:"fragt",wir:"fragen",ihr:"fragt",sie:"fragen"}},
+  {de:"antworten",emo:"🗣️",ok:"antvorten",tr:"cevap vermek",sd:"Ich antworte richtig.",so:"iş antvorte rihtiş",st:"Doğru cevap veriyorum.",c:{ich:"antworte",du:"antwortest",er:"antwortet",wir:"antworten",ihr:"antwortet",sie:"antworten"}},
+  {de:"verstehen",emo:"💡",ok:"ferşteen",tr:"anlamak",sd:"Ich verstehe die Frage.",so:"iş ferştee-e di fraage",st:"Soruyu anlıyorum.",c:{ich:"verstehe",du:"verstehst",er:"versteht",wir:"verstehen",ihr:"versteht",sie:"verstehen"}},
+  {de:"wissen",emo:"🧠",ok:"visen",tr:"bilmek",sd:"Ich weiß die Antwort.",so:"iş vays di antvort",st:"Cevabı biliyorum.",c:{ich:"weiß",du:"weißt",er:"weiß",wir:"wissen",ihr:"wisst",sie:"wissen"}},
+  {de:"denken",emo:"🤔",ok:"denken",tr:"düşünmek",sd:"Ich denke an dich.",so:"iş denke an diş",st:"Seni düşünüyorum.",c:{ich:"denke",du:"denkst",er:"denkt",wir:"denken",ihr:"denkt",sie:"denken"}},
+  {de:"lieben",emo:"❤️",ok:"liiben",tr:"sevmek",sd:"Ich liebe meine Familie.",so:"iş liibe mayne familye",st:"Ailemi seviyorum.",c:{ich:"liebe",du:"liebst",er:"liebt",wir:"lieben",ihr:"liebt",sie:"lieben"}},
+  {de:"mögen",emo:"😋",ok:"möögen",tr:"hoşlanmak / sevmek",sd:"Ich mag Schokolade.",so:"iş maag şokolaade",st:"Çikolatayı severim.",c:{ich:"mag",du:"magst",er:"mag",wir:"mögen",ihr:"mögt",sie:"mögen"}},
+  {de:"wollen",emo:"🙋",ok:"volen",tr:"istemek",sd:"Ich will spielen.",so:"iş vil şpiilen",st:"Oynamak istiyorum.",c:{ich:"will",du:"willst",er:"will",wir:"wollen",ihr:"wollt",sie:"wollen"}},
+  {de:"können",emo:"💪",ok:"könen",tr:"yapabilmek",sd:"Ich kann schwimmen.",so:"iş kan şvimen",st:"Yüzebilirim.",c:{ich:"kann",du:"kannst",er:"kann",wir:"können",ihr:"könnt",sie:"können"}},
+  {de:"müssen",emo:"⏰",ok:"müsen",tr:"zorunda olmak",sd:"Ich muss lernen.",so:"iş mus lernen",st:"Ders çalışmalıyım.",c:{ich:"muss",du:"musst",er:"muss",wir:"müssen",ihr:"müsst",sie:"müssen"}},
+  {de:"dürfen",emo:"✅",ok:"dürfen",tr:"izinli olmak",sd:"Ich darf fernsehen.",so:"iş darf fernzeeen",st:"Televizyon izleyebilirim.",c:{ich:"darf",du:"darfst",er:"darf",wir:"dürfen",ihr:"dürft",sie:"dürfen"}},
+  {de:"brauchen",emo:"🆘",ok:"brauhen",tr:"ihtiyaç duymak",sd:"Ich brauche Hilfe.",so:"iş brauhe hilfe",st:"Yardıma ihtiyacım var.",c:{ich:"brauche",du:"brauchst",er:"braucht",wir:"brauchen",ihr:"braucht",sie:"brauchen"}},
+  {de:"bringen",emo:"📦",ok:"bringen",tr:"getirmek",sd:"Ich bringe das Wasser.",so:"iş bringe das vasa",st:"Suyu getiriyorum.",c:{ich:"bringe",du:"bringst",er:"bringt",wir:"bringen",ihr:"bringt",sie:"bringen"}},
+  {de:"tragen",emo:"🧥",ok:"traagen",tr:"taşımak / giymek",sd:"Ich trage eine Jacke.",so:"iş traage ayne yake",st:"Bir ceket giyiyorum.",c:{ich:"trage",du:"trägst",er:"trägt",wir:"tragen",ihr:"tragt",sie:"tragen"}},
+  {de:"sitzen",emo:"🪑",ok:"zitsen",tr:"oturmak",sd:"Ich sitze auf dem Stuhl.",so:"iş zitse auf dem ştuul",st:"Sandalyede oturuyorum.",c:{ich:"sitze",du:"sitzt",er:"sitzt",wir:"sitzen",ihr:"sitzt",sie:"sitzen"}},
+  {de:"stehen",emo:"🧍",ok:"şteen",tr:"ayakta durmak",sd:"Ich stehe an der Tür.",so:"iş ştee-e an dea tüür",st:"Kapıda duruyorum.",c:{ich:"stehe",du:"stehst",er:"steht",wir:"stehen",ihr:"steht",sie:"stehen"}},
+  {de:"springen",emo:"🤾",ok:"şpringen",tr:"zıplamak",sd:"Ich springe hoch.",so:"iş şpringe hoh",st:"Yükseğe zıplıyorum.",c:{ich:"springe",du:"springst",er:"springt",wir:"springen",ihr:"springt",sie:"springen"}},
+  {de:"lachen",emo:"😄",ok:"lahen",tr:"gülmek",sd:"Ich lache viel.",so:"iş lahe fiil",st:"Çok gülüyorum.",c:{ich:"lache",du:"lachst",er:"lacht",wir:"lachen",ihr:"lacht",sie:"lachen"}}
 ];
 
 /* ---------- VERİ: SIFATLAR (Adjektive) -------------------------------- */
@@ -230,7 +230,7 @@ const ADJ = [
 /* ---------- VERİ: der/die/das (İsimler + cinsiyet) -------------------- */
 const NOUNS = [
   {w:"Hund",art:"der",tr:"köpek",emo:"🐶"},{w:"Katze",art:"die",tr:"kedi",emo:"🐱"},{w:"Buch",art:"das",tr:"kitap",emo:"📖"},
-  {w:"Tisch",art:"der",tr:"masa",emo:"🪑"},{w:"Tür",art:"die",tr:"kapı",emo:"🚪"},{w:"Fenster",art:"das",tr:"pencere",emo:"🪟"},
+  {w:"Tisch",art:"der",tr:"masa",emo:"🍽️"},{w:"Tür",art:"die",tr:"kapı",emo:"🚪"},{w:"Fenster",art:"das",tr:"pencere",emo:"🪟"},
   {w:"Apfel",art:"der",tr:"elma",emo:"🍎"},{w:"Banane",art:"die",tr:"muz",emo:"🍌"},{w:"Wasser",art:"das",tr:"su",emo:"💧"},
   {w:"Ball",art:"der",tr:"top",emo:"⚽"},{w:"Schule",art:"die",tr:"okul",emo:"🏫"},{w:"Kind",art:"das",tr:"çocuk",emo:"🧒"},
   {w:"Vater",art:"der",tr:"baba",emo:"👨"},{w:"Mutter",art:"die",tr:"anne",emo:"👩"},{w:"Haus",art:"das",tr:"ev",emo:"🏠"},
@@ -238,22 +238,28 @@ const NOUNS = [
   {w:"Baum",art:"der",tr:"ağaç",emo:"🌳"},{w:"Sonne",art:"die",tr:"güneş",emo:"☀️"},{w:"Bett",art:"das",tr:"yatak",emo:"🛏️"},
   {w:"Hut",art:"der",tr:"şapka",emo:"🎩"},{w:"Hand",art:"die",tr:"el",emo:"✋"},{w:"Auge",art:"das",tr:"göz",emo:"👁️"},
   {w:"Fuß",art:"der",tr:"ayak",emo:"🦶"},{w:"Nase",art:"die",tr:"burun",emo:"👃"},{w:"Ohr",art:"das",tr:"kulak",emo:"👂"},
-  {w:"Freund",art:"der",tr:"arkadaş",emo:"🧑‍🤝‍🧑"},{w:"Milch",art:"die",tr:"süt",emo:"🥛"},{w:"Ei",art:"das",tr:"yumurta",emo:"🥚"}
+  {w:"Freund",art:"der",tr:"arkadaş",emo:"🧑‍🤝‍🧑"},{w:"Milch",art:"die",tr:"süt",emo:"🥛"},{w:"Ei",art:"das",tr:"yumurta",emo:"🥚"},
+  {w:"Mann",art:"der",tr:"adam",emo:"👨"},{w:"Frau",art:"die",tr:"kadın",emo:"👩"},{w:"Mädchen",art:"das",tr:"kız çocuk",emo:"👧"},
+  {w:"Junge",art:"der",tr:"erkek çocuk",emo:"👦"},{w:"Oma",art:"die",tr:"nine",emo:"👵"},{w:"Brot",art:"das",tr:"ekmek",emo:"🍞"},
+  {w:"Tag",art:"der",tr:"gün",emo:"📆"},{w:"Uhr",art:"die",tr:"saat",emo:"⏰"},{w:"Zimmer",art:"das",tr:"oda",emo:"🛋️"},
+  {w:"Bus",art:"der",tr:"otobüs",emo:"🚌"},{w:"Stadt",art:"die",tr:"şehir",emo:"🏙️"},{w:"Fahrrad",art:"das",tr:"bisiklet",emo:"🚲"},
+  {w:"Zug",art:"der",tr:"tren",emo:"🚆"},{w:"Straße",art:"die",tr:"sokak",emo:"🛣️"},{w:"Pferd",art:"das",tr:"at",emo:"🐴"},
+  {w:"Fisch",art:"der",tr:"balık",emo:"🐟"},{w:"Nacht",art:"die",tr:"gece",emo:"🌙"},{w:"Bein",art:"das",tr:"bacak",emo:"🦵"},
+  {w:"Vogel",art:"der",tr:"kuş",emo:"🐦"},{w:"Suppe",art:"die",tr:"çorba",emo:"🍲"},{w:"Jahr",art:"das",tr:"yıl",emo:"📅"},
+  {w:"Berg",art:"der",tr:"dağ",emo:"⛰️"},{w:"Jacke",art:"die",tr:"ceket",emo:"🧥"},{w:"Spiel",art:"das",tr:"oyun",emo:"🎮"},
+  {w:"Schuh",art:"der",tr:"ayakkabı",emo:"👟"},{w:"Hose",art:"die",tr:"pantolon",emo:"👖"},
+  {w:"Tee",art:"der",tr:"çay",emo:"🍵"},{w:"Maus",art:"die",tr:"fare",emo:"🐭"},
+  {w:"Regen",art:"der",tr:"yağmur",emo:"🌧️"}
 ];
 
-/* ---------- VERİ: mein/dein/sein (İyelik) ---------------------------- */
-/* pron: benim=mein, senin=dein, onun=sein */
-const POSS = [
-  {de:"___ Vater",ans:"mein",cue:"benim baba(m)",full:"mein Vater",tr:"babam"},
-  {de:"___ Buch",ans:"dein",cue:"senin kitap",full:"dein Buch",tr:"senin kitabın"},
-  {de:"___ Hund",ans:"sein",cue:"onun köpek",full:"sein Hund",tr:"onun köpeği"},
-  {de:"___ Mutter",ans:"mein",cue:"benim anne(m)",full:"meine Mutter",tr:"annem"},
-  {de:"___ Ball",ans:"dein",cue:"senin top",full:"dein Ball",tr:"senin topun"},
-  {de:"___ Auto",ans:"sein",cue:"onun araba",full:"sein Auto",tr:"onun arabası"},
-  {de:"___ Schule",ans:"mein",cue:"benim okul",full:"meine Schule",tr:"okulum"},
-  {de:"___ Freund",ans:"dein",cue:"senin arkadaş",full:"dein Freund",tr:"senin arkadaşın"},
-  {de:"___ Katze",ans:"sein",cue:"onun kedi",full:"seine Katze",tr:"onun kedisi"},
-  {de:"___ Bruder",ans:"mein",cue:"benim kardeş",full:"mein Bruder",tr:"kardeşim"}
+/* ---------- VERİ: mein/dein/sein/unser/euer (İyelik + doğru ek) ------- */
+/* k = der/das için form; e = die için form (+e). Endung je nach Geschlecht. */
+const POSS_P = [
+  {k:"mein", e:"meine",  tr:"benim (mein)"},
+  {k:"dein", e:"deine",  tr:"senin (dein)"},
+  {k:"sein", e:"seine",  tr:"onun (sein)"},
+  {k:"unser",e:"unsere", tr:"bizim (unser)"},
+  {k:"euer", e:"eure",   tr:"sizin (euer)"}
 ];
 
 /* ---------- VERİ: Okuma (kısa metinler) ------------------------------ */
@@ -401,8 +407,8 @@ function Home(){
     <div class="menu">
       <button class="mbtn" onclick="LearnDeck('verb')"><span class="emo">🏃</span><span class="name">Fiiller</span><span class="sub">${VERBS.length} fiil · cümle + çekim</span></button>
       <button class="mbtn" onclick="LearnDeck('adj')"><span class="emo">🌈</span><span class="name">Sıfatlar</span><span class="sub">${ADJ.length} sıfat · cümle</span></button>
-      <button class="mbtn" onclick="Pron()"><span class="emo">👤</span><span class="name">ich · du · er/sie/es</span><span class="sub">Fiil çekimi alıştırması</span></button>
-      <button class="mbtn" onclick="Poss()"><span class="emo">🗝️</span><span class="name">mein · dein · sein</span><span class="sub">benim · senin · onun</span></button>
+      <button class="mbtn" onclick="Pron()"><span class="emo">👤</span><span class="name">Zamir + Çekim</span><span class="sub">ich·du·er·sie·es·wir·ihr·sie</span></button>
+      <button class="mbtn" onclick="Poss()"><span class="emo">🗝️</span><span class="name">mein·dein·sein…</span><span class="sub">+ unser · euer (doğru ek)</span></button>
       <button class="mbtn" onclick="Artikel()"><span class="emo">🔵🔴🟢</span><span class="name">der · die · das</span><span class="sub">Artikel oyunu (renkli)</span></button>
       <button class="mbtn" onclick="Reading()"><span class="emo">📖</span><span class="name">Okuma</span><span class="sub">Kısa metinler</span></button>
     </div>
@@ -433,7 +439,7 @@ function LearnCard(){
   const it=deck[di];
   const dots=deck.map((_,i)=>`<i class="${i<=di?'on':''}"></i>`).join("");
   const conj = deckKind==="verb"
-    ? `<div class="conj"><span>${esc(it.ich)}</span><span>${esc(it.du)}</span><span>${esc(it.er)}</span></div>` : "";
+    ? `<div class="conj"><span>ich ${esc(it.c.ich)}</span><span>du ${esc(it.c.du)}</span><span>er/sie/es ${esc(it.c.er)}</span><span>wir ${esc(it.c.wir)}</span><span>ihr ${esc(it.c.ihr)}</span><span>sie/Sie ${esc(it.c.sie)}</span></div>` : "";
   app().innerHTML=`
     <button class="back" onclick="Home()">← Ana sayfa</button>
     <div class="progress-dots">${dots}</div>
@@ -506,21 +512,22 @@ function pick(btn,chosen,correct,deWord){
 function Pron(){
   startStudy();
   const v=VERBS[Math.floor(Math.random()*VERBS.length)];
-  const forms=[["ich",v.ich],["du",v.du],["er/sie/es",v.er]];
-  const pick=forms[Math.floor(Math.random()*forms.length)];
-  const verbForm=pick[1].split(" ").slice(1).join(" "); // sadece fiil kısmı
-  const wrong=forms.filter(f=>f!==pick).map(f=>f[1].split(" ").slice(1).join(" "));
-  const opts=shuffle([verbForm,...wrong]);
+  const persons=[["ich",v.c.ich],["du",v.c.du],["er/sie/es",v.c.er],["wir",v.c.wir],["ihr",v.c.ihr],["sie/Sie",v.c.sie]];
+  const pick=persons[Math.floor(Math.random()*persons.length)];
+  const correct=pick[1];
+  const full=pick[0].split("/")[0]+" "+correct; // temiz okunuş (er/sie/es -> er)
+  const wrong=[...new Set(persons.map(p=>p[1]).filter(f=>f!==correct))];
+  const opts=shuffle([correct, ...shuffle(wrong).slice(0,3)]);
   app().innerHTML=`
     <div class="qhead"><button class="back" onclick="Home()">← Çık</button>
       <div class="muted" style="font-weight:800">👤 Çekim</div></div>
     <div class="qcard">
       <div class="qkind">${esc(v.de)} — ${esc(v.tr)}</div>
       <div class="qword">${esc(pick[0])} <span style="color:var(--brand)">____</span></div>
-      <button class="speak" onclick="speak('${esc(pick[1])}')">🔊 Dinle</button>
+      <div class="muted">doğru eki seç</div>
     </div>
     <div class="options" id="opts">
-      ${opts.map(o=>`<button class="opt" onclick="pickPron(this,'${esc(o)}','${esc(verbForm)}','${esc(pick[1])}')">${esc(o)}</button>`).join("")}
+      ${opts.map(o=>`<button class="opt" onclick="pickPron(this,'${esc(o)}','${esc(correct)}','${esc(full)}')">${esc(pick[0])} <b>${esc(o)}</b></button>`).join("")}
     </div>
     <div class="toast" id="toast"></div>
     <button class="btn ghost" style="margin-top:8px" onclick="Pron()">Yeni →</button>
@@ -538,30 +545,40 @@ function pickPron(btn,chosen,correct,full){
 /* ---------- mein/dein/sein ------------------------------------------ */
 function Poss(){
   startStudy();
-  const it=POSS[Math.floor(Math.random()*POSS.length)];
-  const opts=shuffle(["mein","dein","sein"]);
+  const n=NOUNS[Math.floor(Math.random()*NOUNS.length)];
+  const p=POSS_P[Math.floor(Math.random()*POSS_P.length)];
+  const isDie = n.art==="die";
+  const correct = isDie ? p.e : p.k;          // die -> +e (meine), der/das -> (mein)
+  const wrongEnd = isDie ? p.k : p.e;         // gleiche Person, falsche Endung
+  const other = POSS_P[(POSS_P.indexOf(p)+1+Math.floor(Math.random()*(POSS_P.length-1)))%POSS_P.length];
+  const otherForm = isDie ? other.e : other.k;
+  const opts = shuffle([...new Set([correct, wrongEnd, otherForm])]);
+  const full = correct+" "+n.w;
+  const artClass = n.art==="der"?"a-der":isDie?"a-die":"a-das";
   app().innerHTML=`
     <div class="qhead"><button class="back" onclick="Home()">← Çık</button>
-      <div class="muted" style="font-weight:800">🗝️ mein/dein/sein</div></div>
+      <div class="muted" style="font-weight:800">🗝️ İyelik</div></div>
+    <div class="artlegend"><span class="a-der">der</span><span class="a-die">die</span><span class="a-das">das</span></div>
     <div class="qcard">
-      <div class="qkind">${esc(it.cue)}</div>
-      <div class="qword sm">${esc(it.de)}</div>
-      <div class="muted">benim=mein · senin=dein · onun=sein</div>
+      <div class="qkind">${esc(p.tr)}</div>
+      <div style="font-size:40px">${n.emo}</div>
+      <div class="qword">____ <span class="${artClass}" style="padding:2px 10px;border-radius:8px">${esc(n.w)}</span></div>
+      <div class="muted">${esc(n.tr)} · kural: <b>die → +e</b> (meine) · der/das → (mein)</div>
     </div>
     <div class="options" id="opts">
-      ${opts.map(o=>`<button class="opt" onclick="pickPoss(this,'${o}','${it.ans}','${esc(it.full)}','${esc(it.tr)}')">${o}</button>`).join("")}
+      ${opts.map(o=>`<button class="opt" onclick="pickPoss(this,'${esc(o)}','${esc(correct)}','${esc(full)}')"><b>${esc(o)}</b> ${esc(n.w)}</button>`).join("")}
     </div>
     <div class="toast" id="toast"></div>
     <button class="btn ghost" style="margin-top:8px" onclick="Poss()">Yeni →</button>
   `;
 }
-function pickPoss(btn,chosen,correct,full,tr){
+function pickPoss(btn,chosen,correct,full){
   const opts=document.getElementById("opts"); [...opts.children].forEach(b=>b.disabled=true);
   const t=document.getElementById("toast");
-  if(chosen===correct){ btn.classList.add("correct"); t.innerHTML="Doğru! → <b>"+full+"</b> ("+tr+")"; t.className="toast good"; speak(full); addLearned("poss:"+full); }
-  else{ btn.classList.add("wrong"); t.innerHTML="Doğru: <b>"+correct+"</b> → "+full; t.className="toast bad";
-    [...opts.children].forEach(b=>{ if(b.textContent===correct)b.classList.add("correct"); }); }
-  setTimeout(Poss, chosen===correct?1000:1800);
+  if(chosen===correct){ btn.classList.add("correct"); t.innerHTML="Doğru! → <b>"+full+"</b>"; t.className="toast good"; speak(full); addLearned("poss:"+full); }
+  else{ btn.classList.add("wrong"); t.innerHTML="Doğru: <b>"+full+"</b>"; t.className="toast bad";
+    [...opts.children].forEach(b=>{ if(b.querySelector("b") && b.querySelector("b").textContent===correct)b.classList.add("correct"); }); }
+  setTimeout(Poss, chosen===correct?1100:2000);
 }
 
 /* ---------- der/die/das (renkli) ------------------------------------ */
