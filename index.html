@@ -338,14 +338,33 @@ const NOUNS = [
   {w:"Bär",art:"der",tr:"ayı",emo:"🐻"},{w:"Kaffee",art:"der",tr:"kahve",emo:"☕"}
 ];
 
-/* ---------- VERİ: mein/dein/sein/unser/euer (İyelik + doğru ek) ------- */
-/* k = der/das için form; e = die için form (+e). Endung je nach Geschlecht. */
-const POSS_P = [
-  {k:"mein", e:"meine",  tr:"benim (mein)"},
-  {k:"dein", e:"deine",  tr:"senin (dein)"},
-  {k:"sein", e:"seine",  tr:"onun (sein)"},
-  {k:"unser",e:"unsere", tr:"bizim (unser)"},
-  {k:"euer", e:"eure",   tr:"sizin (euer)"}
+/* ---------- VERİ: Günlük kısa cümleler (Alltagssätze) ---------------- */
+const SATZE = [
+  {de:"Wie geht es dir?",ok:"vi geet es dia",tr:"Nasılsın?",emo:"👋"},
+  {de:"Mir geht es gut.",ok:"mia geet es gut",tr:"İyiyim.",emo:"😊"},
+  {de:"Wie heißt du?",ok:"vi hayst du",tr:"Adın ne?",emo:"🙂"},
+  {de:"Ich heiße Aylin.",ok:"iş hayse aylin",tr:"Benim adım Aylin.",emo:"📛"},
+  {de:"Woher kommst du?",ok:"vohea komst du",tr:"Nerelisin?",emo:"🌍"},
+  {de:"Ich komme aus der Türkei.",ok:"iş kome aus dea türkay",tr:"Türkiye'denim.",emo:"🇹🇷"},
+  {de:"Wie alt bist du?",ok:"vi alt bist du",tr:"Kaç yaşındasın?",emo:"🎂"},
+  {de:"Danke schön!",ok:"danke şöön",tr:"Çok teşekkürler!",emo:"🙏"},
+  {de:"Bitte schön.",ok:"bite şöön",tr:"Rica ederim.",emo:"🤲"},
+  {de:"Entschuldigung!",ok:"entşuldigung",tr:"Affedersiniz / Pardon!",emo:"🙇"},
+  {de:"Ich verstehe nicht.",ok:"iş ferştee-e niht",tr:"Anlamıyorum.",emo:"❓"},
+  {de:"Kannst du das wiederholen?",ok:"kanst du das viderhoolen",tr:"Tekrar eder misin?",emo:"🔁"},
+  {de:"Wie spät ist es?",ok:"vi şpeet ist es",tr:"Saat kaç?",emo:"⏰"},
+  {de:"Ich habe Hunger.",ok:"iş haabe hunga",tr:"Açım.",emo:"🍽️"},
+  {de:"Ich habe Durst.",ok:"iş haabe durst",tr:"Susadım.",emo:"🥤"},
+  {de:"Ich bin müde.",ok:"iş bin müüde",tr:"Yorgunum.",emo:"😴"},
+  {de:"Wo ist die Toilette?",ok:"vo ist di tualete",tr:"Tuvalet nerede?",emo:"🚻"},
+  {de:"Was kostet das?",ok:"vas kostet das",tr:"Bu ne kadar?",emo:"💶"},
+  {de:"Ich möchte einen Kaffee.",ok:"iş möşte aynen kafee",tr:"Bir kahve istiyorum.",emo:"☕"},
+  {de:"Guten Appetit!",ok:"guten apetiit",tr:"Afiyet olsun!",emo:"😋"},
+  {de:"Bis morgen!",ok:"bis morgen",tr:"Yarın görüşürüz!",emo:"👋"},
+  {de:"Ich liebe dich.",ok:"iş liibe diş",tr:"Seni seviyorum.",emo:"❤️"},
+  {de:"Alles Gute!",ok:"ales guute",tr:"İyi şanslar / Her şey gönlünce!",emo:"🍀"},
+  {de:"Ich brauche Hilfe.",ok:"iş brauhe hilfe",tr:"Yardıma ihtiyacım var.",emo:"🆘"},
+  {de:"Schönen Tag noch!",ok:"şöönen taak noh",tr:"İyi günler!",emo:"🌞"}
 ];
 
 /* ---------- VERİ: Okuma (kısa metinler) ------------------------------ */
@@ -493,7 +512,7 @@ function Home(){
     <div class="menu">
       <button class="mbtn" onclick="LearnDeck('verb')"><span class="emo">🏃</span><span class="name">Fiiller</span><span class="sub">${VERBS.length} fiil · cümle + çekim</span></button>
       <button class="mbtn" onclick="LearnDeck('adj')"><span class="emo">🌈</span><span class="name">Sıfatlar</span><span class="sub">${ADJ.length} sıfat · cümle</span></button>
-      <button class="mbtn" onclick="Poss()"><span class="emo">🗝️</span><span class="name">mein·dein·sein…</span><span class="sub">+ unser · euer (doğru ek)</span></button>
+      <button class="mbtn" onclick="Satze()"><span class="emo">💬</span><span class="name">Günlük Cümleler</span><span class="sub">sık kullanılan kısa cümleler</span></button>
       <button class="mbtn" onclick="Artikel()"><span class="emo">🔵🔴🟢</span><span class="name">der · die · das</span><span class="sub">Artikel oyunu (renkli)</span></button>
       <button class="mbtn" onclick="Reading()"><span class="emo">📖</span><span class="name">Okuma</span><span class="sub">Kısa metinler</span></button>
     </div>
@@ -593,53 +612,108 @@ function pick(btn,chosen,correct,deWord){
   setTimeout(()=>{ qi++; QuizStep(); }, chosen===correct?800:1600);
 }
 
-/* ---------- mein/dein/sein ------------------------------------------ */
-function Poss(){
-  startStudy();
-  const n=NOUNS[Math.floor(Math.random()*NOUNS.length)];
-  const p=POSS_P[Math.floor(Math.random()*POSS_P.length)];
-  const isDie = n.art==="die";
-  const correct = isDie ? p.e : p.k;          // die -> +e (meine), der/das -> (mein)
-  const wrongEnd = isDie ? p.k : p.e;         // gleiche Person, falsche Endung
-  const other = POSS_P[(POSS_P.indexOf(p)+1+Math.floor(Math.random()*(POSS_P.length-1)))%POSS_P.length];
-  const otherForm = isDie ? other.e : other.k;
-  const opts = shuffle([...new Set([correct, wrongEnd, otherForm])]);
-  const full = correct+" "+n.w;
-  const artClass = n.art==="der"?"a-der":isDie?"a-die":"a-das";
+/* ---------- Günlük Cümleler: ERST lernen (hören+tekrar), DANN Quiz --- */
+let SD2=null;
+function Satze(){ startStudy(); SD2={ list: shuffle(SATZE).slice(0,10), i:0 }; SatzCard(); }
+function SatzCard(){
+  if(SD2.i >= SD2.list.length) return SatzQuiz();
+  const it=SD2.list[SD2.i];
+  const dots=SD2.list.map((_,i)=>`<i class="${i<=SD2.i?'on':''}"></i>`).join("");
+  app().innerHTML=`
+    <button class="back" onclick="Home()">← Ana sayfa</button>
+    <div class="progress-dots">${dots}</div>
+    <div class="learncard">
+      <div class="emo">${it.emo||"💬"}</div>
+      <div class="de" style="font-size:24px">${esc(it.de)}</div>
+      <div class="oku">okunuşu: ${esc(it.ok)}</div>
+      <div class="tr">${esc(it.tr)}</div>
+      <div class="speakrow">
+        <button class="speak big" title="Dinle" onclick="speak('${esc(it.de)}')">🔊</button>
+        <button class="speak" onclick="speak('${esc(it.de)}',true)">🐢 Yavaş</button>
+      </div>
+    </div>
+    <button class="btn primary" onclick="satzNext()">Öğrendim, devam ✓</button>
+  `;
+  speak(it.de); addLearned("satz:"+it.de); window.scrollTo(0,0);
+}
+function satzNext(){ SD2.i++; SatzCard(); }
+
+let SQ=null;
+function SatzQuiz(){ SQ={ list: shuffle(SD2.list).slice(0, Math.min(6, SD2.list.length)), i:0, right:0 }; SQ.total=SQ.list.length; SatzQ(); }
+function SatzQ(){
+  if(SQ.i >= SQ.total) return Done(SQ.right, SQ.total);
+  const it=SQ.list[SQ.i];
+  const others=shuffle(SATZE.filter(x=>x.de!==it.de)).slice(0,3);
+  const opts=shuffle([it, ...others]);
+  const pct=Math.round(SQ.i/SQ.total*100);
   app().innerHTML=`
     <div class="qhead"><button class="back" onclick="Home()">← Çık</button>
-      <div class="muted" style="font-weight:800">🗝️ İyelik</div></div>
-    <div class="artlegend"><span class="a-der">der</span><span class="a-die">die</span><span class="a-das">das</span></div>
+      <div class="qbar"><i style="width:${pct}%"></i></div>
+      <div class="muted" style="font-weight:800">${SQ.i+1}/${SQ.total}</div></div>
     <div class="qcard">
-      <div class="qkind">${esc(p.tr)}</div>
-      <div style="font-size:40px">${n.emo}</div>
-      <div class="qword">____ <span class="${artClass}" style="padding:2px 10px;border-radius:8px">${esc(n.w)}</span></div>
-      <div class="muted">${esc(n.tr)} · kural: <b>die → +e</b> (meine) · der/das → (mein)</div>
+      <div class="qkind">Ne demek?</div>
+      <div class="qword" style="font-size:22px">${esc(it.de)}</div>
+      <button class="speak" onclick="speak('${esc(it.de)}')">🔊 Dinle</button>
     </div>
     <div class="options" id="opts">
-      ${opts.map(o=>`<button class="opt" onclick="pickPoss(this,'${esc(o)}','${esc(correct)}','${esc(full)}')"><b>${esc(o)}</b> ${esc(n.w)}</button>`).join("")}
+      ${opts.map(o=>`<button class="opt" onclick="pickSatz(this,${o.de===it.de?1:0})">${esc(o.tr)}</button>`).join("")}
     </div>
     <div class="toast" id="toast"></div>
-    <button class="btn ghost" style="margin-top:8px" onclick="Poss()">Yeni →</button>
   `;
+  window.scrollTo(0,0);
 }
-function pickPoss(btn,chosen,correct,full){
+function pickSatz(btn, isCorrect){
+  const it=SQ.list[SQ.i];
   const opts=document.getElementById("opts"); [...opts.children].forEach(b=>b.disabled=true);
   const t=document.getElementById("toast");
-  if(chosen===correct){ btn.classList.add("correct"); t.innerHTML="Doğru! → <b>"+full+"</b>"; t.className="toast good"; speak(full); addLearned("poss:"+full); }
-  else{ btn.classList.add("wrong"); t.innerHTML="Doğru: <b>"+full+"</b>"; t.className="toast bad";
-    [...opts.children].forEach(b=>{ if(b.querySelector("b") && b.querySelector("b").textContent===correct)b.classList.add("correct"); }); }
-  setTimeout(Poss, chosen===correct?1100:2000);
+  if(isCorrect){ btn.classList.add("correct"); SQ.right++; t.textContent="Doğru! 🎉"; t.className="toast good"; speak(it.de); }
+  else{ btn.classList.add("wrong"); t.textContent="Doğru: "+it.tr; t.className="toast bad";
+    [...opts.children].forEach(b=>{ if(b.textContent===it.tr)b.classList.add("correct"); }); }
+  setTimeout(()=>{ SQ.i++; SatzQ(); }, isCorrect?900:1700);
 }
 
-/* ---------- der/die/das (renkli) ------------------------------------ */
+/* ---------- der/die/das: ERST lernen (Wort + Artikel), DANN Quiz ----- */
+let AD=null; // Lern-Deck
 function Artikel(){
   startStudy();
-  const it=NOUNS[Math.floor(Math.random()*NOUNS.length)];
-  const opts=["der","die","das"];
+  AD={ list: shuffle(NOUNS).slice(0, 10), i: 0 };
+  ArtikelCard();
+}
+function ArtikelCard(){
+  if(AD.i >= AD.list.length) return ArtikelQuiz();
+  const it=AD.list[AD.i];
+  const cls = it.art==="der" ? "a-der" : it.art==="die" ? "a-die" : "a-das";
+  const dots=AD.list.map((_,i)=>`<i class="${i<=AD.i?'on':''}"></i>`).join("");
+  app().innerHTML=`
+    <button class="back" onclick="Home()">← Ana sayfa</button>
+    <div class="artlegend"><span class="a-der">der = mavi</span><span class="a-die">die = kırmızı</span><span class="a-das">das = yeşil</span></div>
+    <div class="progress-dots">${dots}</div>
+    <div class="learncard">
+      <div class="emo">${it.emo||"📘"}</div>
+      <div class="de"><span class="${cls}" style="padding:2px 12px;border-radius:12px">${it.art}</span> ${esc(it.w)}</div>
+      <div class="tr">${esc(it.tr)}</div>
+      <div class="speakrow">
+        <button class="speak big" title="Dinle" onclick="speak('${it.art} ${esc(it.w)}')">🔊</button>
+        <button class="speak" onclick="speak('${it.art} ${esc(it.w)}',true)">🐢 Yavaş</button>
+      </div>
+    </div>
+    <button class="btn primary" onclick="artikelNext()">Öğrendim, devam ✓</button>
+  `;
+  speak(it.art+" "+it.w);            // Artikel + Wort zusammen hören
+  addLearned("artlearn:"+it.w);
+  window.scrollTo(0,0);
+}
+function artikelNext(){ AD.i++; ArtikelCard(); }
+
+let AQ=null; // Quiz über die gerade gelernten Wörter
+function ArtikelQuiz(){ AQ={ list: shuffle(AD.list), i:0, right:0, total:AD.list.length }; ArtikelQ(); }
+function ArtikelQ(){
+  if(AQ.i >= AQ.total) return Done(AQ.right, AQ.total);
+  const it=AQ.list[AQ.i], pct=Math.round(AQ.i/AQ.total*100);
   app().innerHTML=`
     <div class="qhead"><button class="back" onclick="Home()">← Çık</button>
-      <div class="muted" style="font-weight:800">Artikel</div></div>
+      <div class="qbar"><i style="width:${pct}%"></i></div>
+      <div class="muted" style="font-weight:800">${AQ.i+1}/${AQ.total}</div></div>
     <div class="artlegend"><span class="a-der">der</span><span class="a-die">die</span><span class="a-das">das</span></div>
     <div class="qcard">
       <div class="qkind">Hangi artikel?</div>
@@ -648,19 +722,19 @@ function Artikel(){
       <div class="muted">${esc(it.tr)}</div>
     </div>
     <div class="options" id="opts">
-      ${opts.map(o=>`<button class="opt a-${o}" onclick="pickArt(this,'${o}','${it.art}','${esc(it.w)}')">${o}</button>`).join("")}
+      ${["der","die","das"].map(o=>`<button class="opt a-${o}" onclick="pickArt(this,'${o}','${it.art}','${esc(it.w)}')">${o}</button>`).join("")}
     </div>
     <div class="toast" id="toast"></div>
-    <button class="btn ghost" style="margin-top:8px" onclick="Artikel()">Yeni →</button>
   `;
+  window.scrollTo(0,0);
 }
 function pickArt(btn,chosen,correct,word){
   const opts=document.getElementById("opts"); [...opts.children].forEach(b=>b.disabled=true);
   const t=document.getElementById("toast");
-  if(chosen===correct){ btn.classList.add("correct"); t.innerHTML="Doğru! → <b>"+correct+" "+word+"</b>"; t.className="toast good"; speak(correct+" "+word); addLearned("art:"+word); }
+  if(chosen===correct){ btn.classList.add("correct"); AQ.right++; t.innerHTML="Doğru! → <b>"+correct+" "+word+"</b>"; t.className="toast good"; speak(correct+" "+word); addLearned("art:"+word); }
   else{ btn.classList.add("wrong"); t.innerHTML="Doğru: <b>"+correct+" "+word+"</b>"; t.className="toast bad";
     [...opts.children].forEach(b=>{ if(b.textContent===correct)b.classList.add("correct"); }); }
-  setTimeout(Artikel, chosen===correct?1000:1800);
+  setTimeout(()=>{ AQ.i++; ArtikelQ(); }, chosen===correct?1000:1800);
 }
 
 /* ---------- OKUMA (Leseübung) --------------------------------------- */
